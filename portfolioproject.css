@@ -128,25 +128,49 @@ body {
 	transition: transform 80ms ease-in;
 	text-align: center;
 	align-self: center;
+    width: 18%;   
+}
+
+.btn1 {
+	background-color: #025E73;
+	border-radius: 30px;
+	border: 1px #B4BF8A;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 1rem;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	text-align: center;
+	align-self: center;
     width: 18%;
+    position: absolute;
+    right: 40%;
+   bottom: -260%;
 }
 
 
+
+
+
+ /*flex-direction: column;*/
   /*buttons begin*/
-/**/
+/*
 .button {
    
     overflow: auto;
     z-index: -1;
     display: flex;
-    flex-direction: column;
+    
     justify-content: flex-end;
    
   }
   
   .button a{
-  
-    float: left;
+    
+    float: right;
     width: 20%;
     min-width: 40px;
     text-align: center;
@@ -154,11 +178,11 @@ body {
     transition: all 0.3s ease;
     color: white;
     font-size: 25px;
-    position: absolute;
+    position: relative;
      background-color: #005C53;
      display: flex;
      
-    flex-direction: column;
+    
     justify-content: flex-end;
   }
   
@@ -170,14 +194,14 @@ body {
   .active {
     background-color: #D98989;
   }
-  
+  /*
     @media only screen and (max-width: 600px) {
     .button {
     width: 20%;
     overflow: auto;
     z-index: -1;
     display: flex;
-    flex-direction: column;
+  
     justify-content: flex-end;
     
   }
@@ -190,10 +214,10 @@ body {
     transition: all 0.3s ease;
     color: white;
     font-size: 25px;
-    position: absolute;
+    position: relative;
      background-color: #005C53;
      display: flex;
-    flex-direction: column;
+    
     justify-content: flex-end;
   }
   
@@ -214,7 +238,7 @@ body {
     overflow: auto;
     z-index: -1;
     display: flex;
-    flex-direction: column;
+   
     justify-content: flex-end;
     
   }
@@ -227,10 +251,10 @@ body {
     transition: all 0.3s ease;
     color: white;
     font-size: 25px;
-    position: absolute;
+    position: relative;
      background-color: #005C53;
      display: flex;
-    flex-direction: column;
+    
     justify-content: flex-end;
   }
   
@@ -261,7 +285,7 @@ body {
     transition: all 0.3s ease;
     color: white;
     font-size: 25px;
-    position: absolute;
+    position: relative;
      background-color: #005C53;
   }
   
@@ -290,8 +314,8 @@ body {
 
 .marker{
     display: none;
-   width:  60px;
-   height: 45px;
+   width:  90px;
+   height: 75px;
   background-size: 100%;
   }
   

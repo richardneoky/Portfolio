@@ -49,41 +49,47 @@
       <div class="scroll">
           <h3>In 2023 I also hope to hike the 345 mile Sheltowee Trace Trail that travels the entire length of Daniele Boone National Forrest. This is my planning a documentation website. </h3>
           <h4><a class="btn" href="../Desktop/Sheltowee Trace and Daniel Boone/Sheltoweedanielboone.html">SHELTOWEE TRACE MAP</a></h4>
+          <h5> <a onclick="toggle('signs')"><i class="btn1">Contact(click on marker)</i></a> </h5>
     </div>
 
-   
+    <div id="map"></div>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 
 
-    <div id="map"> </div>
 
-    <div class="button">
-
-        <a class="active" href="#"><i class="fa fa-map"></i></a>
-    <a href="#" onclick="toggle('signs')"><i class="fa fa-map-signs"></i></a>
-    <!--Trailheads-->
-    <a href="#" onclick="toggle('repairs')"><i class="fa fa-bicycle"></i></a>
-    <!--Mile Markers-->
-    <a href="#" onclick="toggle('miles')"><i class="fa fa-road"></i></a>
-    <!--Bike SHop/Repair-->
-    <a href="#" onclick="toggle('closures')"><i class="fa fa-exclamation-triangle"></i></a>
-    <!--Route Closures/Alerts-->
-    <a href="#" onclick="toggle('camping')"><i class="fa fa-fire"></i></a>
-    <!--Camping-->
-    <a href="#" onclick="toggle('hotels')"><i class="fa fa-bed"></i></a>
-    <!--Hotels-->
-    <a href="#" onclick="toggle('beer')"><i class="fa fa-beer"></i></a>
-    <!--Beer/Breweries/Dives-->
-    <a href="#" onclick="toggle('food')"><i class="fa fa-spoon"></i></a>
-    <!--Food/General Stores/Restaurants-->
-    <a href="#" onclick="toggle('sights')"><i class="fa fa-eye"></i></a>
-    <!--Sight Seeing/Historical/Nature-->
-    </div>
 
     
+
+
+        <!--<a onclick="toggle('signs')"><i class="btn">Contact</i></a> -->
+       <!--
+        <a class="active" href="#"><i class="fa fa-map"></i></a>
+    <a href="#" onclick="toggle('signs')"><i class="fa fa-map-signs"></i></a> -->
+<!--Trailheads-->
+   <!-- <a href="#" onclick="toggle('repairs')"><i class="fa fa-bicycle"></i></a>-->
+    <!--Mile Markers-->
+   <!-- <a href="#" onclick="toggle('miles')"><i class="fa fa-road"></i></a>-->
+    <!--Bike SHop/Repair-->
+   <!-- <a href="#" onclick="toggle('closures')"><i class="fa fa-exclamation-triangle"></i></a>-->
+    <!--Route Closures/Alerts-->
+   <!-- <a href="#" onclick="toggle('camping')"><i class="fa fa-fire"></i></a>-->
+    <!--Camping-->
+   <!-- <a href="#" onclick="toggle('hotels')"><i class="fa fa-bed"></i></a>-->
+    <!--Hotels-->
+    <!--<a href="#" onclick="toggle('beer')"><i class="fa fa-beer"></i></a>-->
+    <!--Beer/Breweries/Dives-->
+    <!--<a href="#" onclick="toggle('food')"><i class="fa fa-spoon"></i></a>-->
+    <!--Food/General Stores/Restaurants-->
+   <!-- <a href="#" onclick="toggle('sights')"><i class="fa fa-eye"></i></a>-->
+    <!--Sight Seeing/Historical/Nature-->
+       
+    </div>
+    
+
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoicmlubWFuODciLCJhIjoiY2s5ZDRrOXNmMDN6djNmcDd0eHVhcXNnMSJ9.lSA6fQZIptHf4g5lmD6SMA';
         const map = new mapboxgl.Map({
@@ -126,8 +132,8 @@
         //Roebling Southern Terminus
         lng: -84.50835,
         lat: 39.09619,
-        name: 'Where I live',
-        info: 'Looking for local, Hybrid, or Remote Jobs',
+        name: 'I am a Junior Front-End Developer in Cincinnati, Ohio',
+        info: 'Looking for local, Hybrid, or Remote Jobs. Javascript, CSS, HTMl, Mapbox, currently studying Python | Email: richardneoky@gmail.com',
         type: 'signs',
         isLandMark: true,
         customImg: 'https://lh3.googleusercontent.com/0Hv-wlyqroeVuOwljUSr1cHw2ZdjIEQXTsc5RigKHykDIxLlCdjeErJ4Zy3MMEHMc7-SbfhoHICsbbXpM14QC7Byapy1AJBOJQEthW5aAkbDmwPfYwRR-b6SgQB29ySVi3FoJtoJ7Q=w2400',
