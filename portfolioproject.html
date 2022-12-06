@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./portfolioproject.css" rel="stylesheet">
+    <script src="./portfolioproject.js"></script>
+    <title>PERSONAL PORTFOLIO</title>
+    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+
+    <style>
+     
+    </style>
+  </head>
+  <body>
+
+ <!--GO TO MAP BUTTON
+ <a class="btn" href="../Desktop/rrglandingpage/rrgmaphtml/rrgmap.html"> RRG MAP</a>
+
+ <a class="btn" href="../Desktop/biketrailmap/biketrailmap.html"> BIKE MAP</a>
+
+ <a class="btn" href="../Desktop/Sheltowee Trace and Daniel Boone/Sheltoweedanielboone.html">SHELTOWEE TRACE MAP</a>-->
+
+
+
+
+ 
+ <div class="bg-text">Richard's Portfolio</div>
+    <div class="wrapper">
+      <div class="fixed one"></div>
+      <div class="scroll">
+        <h3>
+          This is my Red River Gorge Map Project. I am documenting where I like to hike and camp in Red River Gorge Located in Eastern Kentucky. Click on the tent and follow the link to ALLTrails!
+        </h3>
+        <h4><a class="btn" href="../Desktop/rrglandingpage/rrgmaphtml/rrgmap.html"> RRG MAP</a></h4>
+        
+      </div>
+      <div class="fixed two"></div>
+      <div class="scroll">
+        <h3>
+          In spring 2023 I am or have already ridden this 350 mile trail that travels from Cleveland to Cincinnati, Ohio. This is a planning tool to help me plan where to eat, sleep, what to see, and experience. I will be covering the entire Ohio bike trail system soon on this map. 
+        </h3>
+        <h4><a class="btn" href="../Desktop/biketrailmap/biketrailmap.html"> BIKE MAP</a></h4>
+      </div>
+      <div class="fixed three"></div>
+      <div class="scroll">
+          <h3>In 2023 I also hope to hike the 345 mile Sheltowee Trace Trail that travels the entire length of Daniele Boone National Forrest. This is my planning a documentation website. </h3>
+          <h4><a class="btn" href="../Desktop/Sheltowee Trace and Daniel Boone/Sheltoweedanielboone.html">SHELTOWEE TRACE MAP</a></h4>
+    </div>
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+
+    <div id="map"> </div>
+
+    <div class="button">
+
+        <a class="active" href="#"><i class="fa fa-map"></i></a>
+    <a href="#" onclick="toggle('signs')"><i class="fa fa-map-signs"></i></a>
+    <!--Trailheads-->
+    <a href="#" onclick="toggle('repairs')"><i class="fa fa-bicycle"></i></a>
+    <!--Mile Markers-->
+    <a href="#" onclick="toggle('miles')"><i class="fa fa-road"></i></a>
+    <!--Bike SHop/Repair-->
+    <a href="#" onclick="toggle('closures')"><i class="fa fa-exclamation-triangle"></i></a>
+    <!--Route Closures/Alerts-->
+    <a href="#" onclick="toggle('camping')"><i class="fa fa-fire"></i></a>
+    <!--Camping-->
+    <a href="#" onclick="toggle('hotels')"><i class="fa fa-bed"></i></a>
+    <!--Hotels-->
+    <a href="#" onclick="toggle('beer')"><i class="fa fa-beer"></i></a>
+    <!--Beer/Breweries/Dives-->
+    <a href="#" onclick="toggle('food')"><i class="fa fa-spoon"></i></a>
+    <!--Food/General Stores/Restaurants-->
+    <a href="#" onclick="toggle('sights')"><i class="fa fa-eye"></i></a>
+    <!--Sight Seeing/Historical/Nature-->
+    </div>
+
+    
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmlubWFuODciLCJhIjoiY2s5ZDRrOXNmMDN6djNmcDd0eHVhcXNnMSJ9.lSA6fQZIptHf4g5lmD6SMA';
+        const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/rinman87/clb46gqf5000n15k7m34tvuku', // style URL
+        center: [-84.50835, 39.09619], // starting position [lng, lat]
+        zoom: 12// starting zoom
+        });
+        
+          </script>
+
+
+
+
+
+<!--markers JS-->
+<script>
+
+    function createMarker(lng, lat, name, info, type, isLandmark, customImg) {
+
+
+      const popup = new mapboxgl.Popup().setHTML(
+        `<h3>${name}</h3><p>${info}</p>`
+      );
+
+      const el = document.createElement('div');
+      el.className = `marker ${type}`;
+      if (isLandmark) el.className += ' landmark'
+      if (customImg) el.style.backgroundImage = `url(${customImg})`
+      el.style.display = 'none';
+      const marker = new mapboxgl.Marker(el)
+        .setLngLat([lng, lat])
+        .setPopup(popup)
+        .addTo(map);
+    }
+
+    const mapMarkerData = [
+      {
+        //Roebling Southern Terminus
+        lng: -84.50835,
+        lat: 39.09619,
+        name: 'Where I live',
+        info: 'Looking for local, Hybrid, or Remote Jobs',
+        type: 'signs',
+        isLandMark: true,
+        customImg: 'https://lh3.googleusercontent.com/0Hv-wlyqroeVuOwljUSr1cHw2ZdjIEQXTsc5RigKHykDIxLlCdjeErJ4Zy3MMEHMc7-SbfhoHICsbbXpM14QC7Byapy1AJBOJQEthW5aAkbDmwPfYwRR-b6SgQB29ySVi3FoJtoJ7Q=w2400',
+      },
+      ]
+
+      for (const markerData of mapMarkerData) {
+      createMarker(markerData.lng, markerData.lat, markerData.name, markerData.info, markerData.type, markerData.isLandMark, markerData.customImg)
+    }
+</script>
+
+
+
+
+
+  </body>
+
+</html>

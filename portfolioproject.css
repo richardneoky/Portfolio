@@ -1,0 +1,300 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff0c2;
+    font-weight: bold;
+    font-size: 60px;
+    border: 8px solid #000000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 270px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .bg-text {
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: bold;
+	font-size: 60px;
+	border: 10px solid #f1f1f1;
+	position: fixed; 
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 400px;
+	padding: 20px;
+	text-align: center;
+  }
+
+
+
+
+
+
+
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+}
+.fixed {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  color: #eeeeee;
+  text-align: center;
+  display: table;
+}
+.fixed h2 {
+  display: table-cell;
+  vertical-align: middle;
+}
+.scroll {
+  background-color: #ffe0f6;
+  padding: 10px 70px;
+  color: #666666;
+}
+.one {
+  background-image: url("https://lh3.googleusercontent.com/Ji4GCeFsbcbinLP3Jh6-Ex7EYcYjhjraw-PPHD_bru7V5XVZjIdH33nVGP45g2jFzHcJdqKfO4yBff4mnKmk5Yzfg-EfBeYzilhK__5-J7M9a5wVCOxwgzqGXnx6j70ZVGPcGdXZ2w=w2400")
+}
+.two {
+  background-image: url("https://lh3.googleusercontent.com/5xDDn-NqYlawHgWFaETdYOWDo3sXkM79Fy5jOEU5PcdJLqkhr2ljwJFyTzDdPglzxNaUEg5upeghICKz_V8GDXIo1w_PE5v7qbwiI58pXlx0aeiOUrxk__0RZf3ba9Cxo9iwXlPOlw=w2400")
+}
+.three {
+  background-image: url("https://lh3.googleusercontent.com/HbHCUmLqZgtCZ_zwKCA2FtS-RWgT5NjmYIfAW-am3ZzifqY8O8iEhlYLHtWDIxej19tLYrQkTVSOdMyXYnQeOHejtrP1i3qUIF8BQQY95gwo3N6i558x-5jSajiJSbF22P4HLgbc8w=w2400")
+}
+
+
+
+  
+
+:root {
+	/* COLORS */
+	--white: #e9e9e9;
+	--gray: #333;
+	--blue: #0367a6;
+	--lightblue: #008997;
+
+	/* RADII */
+	--button-radius: 0.7rem;
+
+	/* SIZES */
+	--max-width: 758px;
+	--max-height: 420px;
+
+	font-size: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+.btn {
+	background-color: #B4BF8A;
+	/*background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);*/
+	border-radius: 30px;
+	border: 1px #B4BF8A;
+  /*solid var(--blue) */
+	color: var(--white);
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	text-align: center;
+	align-self: center;
+    width: 18%;
+}
+
+
+  /*buttons begin*/
+/**/
+.button {
+   
+    overflow: auto;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+  }
+  
+  .button a{
+  
+    float: left;
+    width: 20%;
+    min-width: 40px;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+     background-color: #005C53;
+     display: flex;
+     
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .button a:hover {
+    background-color: #D98989;
+    
+  }
+  
+  .active {
+    background-color: #D98989;
+  }
+  
+    @media only screen and (max-width: 600px) {
+    .button {
+    width: 20%;
+    overflow: auto;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+  }
+  
+  .button a{
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+     background-color: #005C53;
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .button a:hover {
+    background-color: #D6D58E;
+    
+  }
+  
+  .active {
+    background-color: #D6D58E;
+  }
+  
+    }
+    @media only screen and (min-width: 601px) {
+    .button {
+    width: 20%;
+   
+    overflow: auto;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+  }
+  
+  .button a{
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+     background-color: #005C53;
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .button a:hover {
+    background-color: #D6D58E;
+    
+  }
+  
+  .active {
+    background-color: #D6D58E;
+  }
+    }
+  
+    
+    @media only screen and (min-width: 300px) {
+    .button {
+    width: 20%;
+    overflow: auto;
+    z-index: -1;
+   
+  }
+  
+  .button a{
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+     background-color: #005C53;
+  }
+  
+  .button a:hover {
+    background-color: #D6D58E;
+    
+  }
+  
+  .active {
+    background-color: #D6D58E;
+  }
+    }
+  
+  /*buttons end*/
+
+/*map css*/
+#map {
+    position: relative;
+    top: 50;
+    bottom: 0;
+    width: 100%;
+	height: 60%;
+  }
+
+  /*markers*/
+
+.marker{
+    display: none;
+   width:  60px;
+   height: 45px;
+  background-size: 100%;
+  }
+  
+  .landmark{
+    z-index: 9999;
+  }
